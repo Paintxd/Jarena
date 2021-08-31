@@ -49,12 +49,9 @@ public class Primals extends Agente {
 
     @Override
     public void tomouDano(int energiaRestanteInimigo) {
-        worthCombat = false;
-
         worthCombat = energiaRestanteInimigo + 20 < getEnergia();
-        if (worthCombat) {
-            para();
-        }
+
+        if (worthCombat) para();
     }
 
     @Override
